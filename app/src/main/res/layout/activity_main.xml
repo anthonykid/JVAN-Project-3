@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.example.project3.MainActivity">
+
+    <EditText
+        android:id="@+id/tvInputAngka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="false"
+        android:inputType="none"
+        android:textAlignment="textEnd"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/InputAngka" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDelete"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:onClick="deleteBtn"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_red"
+                android:text="@string/Delete" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAnswer"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:background="@drawable/btn_custom_green"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:text="@string/Answer" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_purple"
+                android:text="@string/_1" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_purple"
+                android:text="@string/_2" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_purple"
+                android:text="@string/_3" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonDiv"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_dark_purple"
+                android:text="@string/Pembagian" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_purple"
+                android:text="@string/_4" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button5"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_purple"
+                android:text="@string/_5" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button6"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_purple"
+                android:text="@string/_6" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonMin"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_dark_purple"
+                android:text="@string/Pengurangan" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button7"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_purple"
+                android:text="@string/_7" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button8"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_purple"
+                android:text="@string/_8" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button9"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_purple"
+                android:text="@string/_9" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonMultiplication"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_dark_purple"
+                android:text="@string/Perkalian" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDecimal"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_custom_dark_purple"
+                android:text="@string/Decimal"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button0"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_purple"
+                android:text="@string/_0" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnPercent"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_dark_purple"
+                android:text="@string/Percent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonPlus"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:background="@drawable/btn_custom_dark_purple"
+                android:text="@string/Penjumlahan" />
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
