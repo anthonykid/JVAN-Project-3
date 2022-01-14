@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context="org.example.project3.MainActivity">
 
     <EditText
@@ -14,6 +15,7 @@
         android:inputType="none"
         android:textAlignment="textEnd"
         android:textSize="40sp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
