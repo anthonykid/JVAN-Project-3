@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">#470D21</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ButtonFuncStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">#D67D3E</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ButtonFuncAddStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">#9C0F48</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>

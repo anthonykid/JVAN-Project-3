@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#E8DCCB"
     tools:context="org.example.project3.MainActivity">
 
     <EditText
@@ -15,11 +15,11 @@
         android:inputType="number"
         android:textAlignment="textEnd"
         android:textSize="40sp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/InputAngka" />
+        tools:hint="@string/InputAngka" />
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -33,23 +33,17 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDelete"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:onClick="deleteBtn"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_red"
-                android:text="@string/Delete" />
+                android:text="@string/Delete"
+                style="@style/ButtonFuncAddStyle"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnClear"
+                style="@style/ButtonFuncAddStyle"
+                android:text="Clear"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnAnswer"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:background="@drawable/btn_custom_green"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
+                style="@style/ButtonFuncAddStyle"
                 android:text="@string/Answer" />
         </TableRow>
 
@@ -59,43 +53,23 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button1"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_purple"
-                android:text="@string/_1" />
+                android:text="@string/_1"
+                style="@style/ButtonStyle"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button2"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_purple"
-                android:text="@string/_2" />
+                android:text="@string/_2"
+                style="@style/ButtonStyle"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button3"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_purple"
-                android:text="@string/_3" />
+                android:text="@string/_3"
+                style="@style/ButtonStyle"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonDiv"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_dark_purple"
-                android:text="@string/Pembagian" />
+                android:text="@string/Pembagian"
+                style="@style/ButtonFuncStyle"/>
         </TableRow>
 
         <TableRow
@@ -104,43 +78,23 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button4"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_purple"
-                android:text="@string/_4" />
+                android:text="@string/_4"
+                style="@style/ButtonStyle"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button5"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_purple"
-                android:text="@string/_5" />
+                android:text="@string/_5"
+                style="@style/ButtonStyle"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button6"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_purple"
-                android:text="@string/_6" />
+                android:text="@string/_6"
+                style="@style/ButtonStyle"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonMin"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_dark_purple"
-                android:text="@string/Pengurangan" />
+                android:text="@string/Pengurangan"
+                style="@style/ButtonFuncStyle"/>
         </TableRow>
 
         <TableRow
@@ -149,43 +103,23 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button7"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_purple"
-                android:text="@string/_7" />
+                android:text="@string/_7"
+                style="@style/ButtonStyle"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button8"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_purple"
-                android:text="@string/_8" />
+                android:text="@string/_8"
+                style="@style/ButtonStyle"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button9"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_purple"
-                android:text="@string/_9" />
+                android:text="@string/_9"
+                style="@style/ButtonStyle"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonMultiplication"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_dark_purple"
-                android:text="@string/Perkalian" />
+                android:text="@string/Perkalian"
+                style="@style/ButtonFuncStyle"/>
         </TableRow>
 
         <TableRow
@@ -194,43 +128,23 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDecimal"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/btn_custom_dark_purple"
                 android:text="@string/Decimal"
-                android:textColor="@color/white" />
+                style="@style/ButtonFuncStyle" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/button0"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_purple"
-                android:text="@string/_0" />
+                android:text="@string/_0"
+                style="@style/ButtonStyle"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnPercent"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_dark_purple"
-                android:text="@string/Percent" />
+                android:text="@string/Percent"
+                style="@style/ButtonFuncStyle"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonPlus"
-                android:layout_width="0dp"
-                android:layout_height="70dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:textColor="@color/white"
-                android:background="@drawable/btn_custom_dark_purple"
-                android:text="@string/Penjumlahan" />
+                android:text="@string/Penjumlahan"
+                style="@style/ButtonFuncStyle"/>
         </TableRow>
     </TableLayout>
 
