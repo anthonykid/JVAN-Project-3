@@ -10,6 +10,7 @@ import android.text.SpannableStringBuilder;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import org.example.project3.R;
 import org.example.project3.databinding.ActivityMainBinding;
@@ -17,6 +18,7 @@ import org.example.project3.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     private EditText display;
+    private TextView resultsTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         display = binding.tvInputAngka;
+        resultsTV = binding.resultTextView;
         display.setShowSoftInputOnFocus(false);
 
         binding.tvInputAngka.setOnClickListener(view -> {
@@ -68,8 +71,9 @@ public class MainActivity extends AppCompatActivity {
             Expression exp = new Expression(userExp);
 
             String result = String.valueOf(exp.calculate());
-            display.setText(result);
+
             display.setSelection(result.length());
+            resultsTV.setText(result);
         });
     }
 

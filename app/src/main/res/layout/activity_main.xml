@@ -7,6 +7,20 @@
     android:background="#E8DCCB"
     tools:context="org.example.project3.MainActivity">
 
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="false"
+        android:inputType="number"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInputAngka" />
+
     <EditText
         android:id="@+id/tvInputAngka"
         android:layout_width="match_parent"
@@ -14,11 +28,12 @@
         android:autofillHints="false"
         android:inputType="number"
         android:textAlignment="textEnd"
-        android:textSize="40sp"
         android:textColor="@color/black"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257"
         tools:hint="@string/InputAngka" />
 
     <TableLayout
