@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class splashScreen extends AppCompatActivity {
 
 
-    private static int splashInterval = 3000;
+    private static int splashInterval = 1000;
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {

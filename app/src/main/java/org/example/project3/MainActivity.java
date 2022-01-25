@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import org.mariuszgromada.math.mxparser.*;
 
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.text.SpannableStringBuilder;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import org.example.project3.R;
 import org.example.project3.databinding.ActivityMainBinding;
@@ -15,6 +18,7 @@ import org.example.project3.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     private EditText display;
+    private TextView resultsTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         display = binding.tvInputAngka;
+        resultsTV = binding.resultTextView;
         display.setShowSoftInputOnFocus(false);
 
         binding.tvInputAngka.setOnClickListener(view -> {
@@ -31,23 +36,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        binding.button0.setOnClickListener(v -> updateText("0"));
-        binding.button1.setOnClickListener(v -> updateText("1"));
-        binding.button2.setOnClickListener(v -> updateText("2"));
-        binding.button3.setOnClickListener(v -> updateText("3"));
-        binding.button4.setOnClickListener(v -> updateText("4"));
-        binding.button5.setOnClickListener(v -> updateText("5"));
-        binding.button6.setOnClickListener(v -> updateText("6"));
-        binding.button7.setOnClickListener(v -> updateText("7"));
-        binding.button8.setOnClickListener(v -> updateText("8"));
-        binding.button9.setOnClickListener(v -> updateText("9"));
-        binding.button0.setOnClickListener(v -> updateText("0"));
-        binding.btnDecimal.setOnClickListener(v -> updateText("."));
-        binding.buttonPlus.setOnClickListener(v -> updateText("+"));
-        binding.buttonMin.setOnClickListener(v -> updateText("-"));
-        binding.buttonMultiplication.setOnClickListener(v -> updateText("X"));
-        binding.buttonDiv.setOnClickListener(v -> updateText("÷"));
-        binding.btnPercent.setOnClickListener(v -> updateText("%"));
+        setToButton(binding.button0,"0");
+        setToButton(binding.button1,"1");
+        setToButton(binding.button2,"2");
+        setToButton(binding.button3,"3");
+        setToButton(binding.button4,"4");
+        setToButton(binding.button5,"5");
+        setToButton(binding.button6,"6");
+        setToButton(binding.button7,"7");
+        setToButton(binding.button8,"8");
+        setToButton(binding.button9,"9");
+
+        setToButton(binding.btnDecimal,".");
+        setToButton(binding.buttonPlus,"+");
+        setToButton(binding.buttonMin,"-");
+        setToButton(binding.buttonMultiplication,"X");
+        setToButton(binding.buttonDiv,"÷");
+        setToButton(binding.btnPercent,"%");
+
+        buttonEffect(binding.btnAnswer);
+        buttonEffect(binding.btnDelete);
+        buttonEffect(binding.btnClear);
+
+        binding.btnClear.setOnClickListener(v -> {
+            display.setText("");
+        });
+
         binding.btnAnswer.setOnClickListener(v -> {
             String userExp = display.getText().toString();
 
@@ -57,8 +71,9 @@ public class MainActivity extends AppCompatActivity {
             Expression exp = new Expression(userExp);
 
             String result = String.valueOf(exp.calculate());
-            display.setText(result);
+
             display.setSelection(result.length());
+            resultsTV.setText(result);
         });
     }
 
@@ -85,5 +100,32 @@ public class MainActivity extends AppCompatActivity {
             display.setText(selection);
             display.setSelection(cursorPos - 1);
         }
+    }
+
+
+    public static void buttonEffect(View button){
+        button.setOnTouchListener(new View.OnTouchListener() {
+
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN: {
+                        v.getBackground().setColorFilter(0xe0f47521, PorterDuff.Mode.SRC_ATOP);
+                        v.invalidate();
+                        break;
+                    }
+                    case MotionEvent.ACTION_UP: {
+                        v.getBackground().clearColorFilter();
+                        v.invalidate();
+                        break;
+                    }
+                }
+                return false;
+            }
+        });
+    }
+
+    public void setToButton(View view, String string){
+        buttonEffect(view);
+        view.setOnClickListener(v -> updateText(string));
     }
 }
