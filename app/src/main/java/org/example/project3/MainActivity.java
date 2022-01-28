@@ -11,8 +11,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import org.example.project3.R;
 import org.example.project3.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        display = binding.tvInputAngka;
-        resultsTV = binding.resultTextView;
+        display = findViewById(R.id.tvInputAngka);
+        resultsTV = findViewById(R.id.resultTextView);
         display.setShowSoftInputOnFocus(false);
 
         binding.tvInputAngka.setOnClickListener(view -> {
@@ -60,20 +58,15 @@ public class MainActivity extends AppCompatActivity {
 
         binding.btnClear.setOnClickListener(v -> {
             display.setText("");
+            resultsTV.setText("");
+        });
+
+        binding.btnDelete.setOnClickListener(v -> {
+            toDelete();
         });
 
         binding.btnAnswer.setOnClickListener(v -> {
-            String userExp = display.getText().toString();
-
-            userExp = userExp.replaceAll("÷", "/");
-            userExp = userExp.replaceAll("X", "*");
-
-            Expression exp = new Expression(userExp);
-
-            String result = String.valueOf(exp.calculate());
-
-            display.setSelection(result.length());
-            resultsTV.setText(result);
+            toAnswer();
         });
     }
 
@@ -90,7 +83,27 @@ public class MainActivity extends AppCompatActivity {
         display.setSelection(cursorPos + 1);
     }
 
-    public void deleteBtn(View view) {
+    private  void toAnswer(){
+        int txtLen = display.getText().length();
+
+        if (txtLen <= 1){
+            resultsTV.setText(display.getText().toString());
+        }else{
+            String userExp = display.getText().toString();
+
+            userExp = userExp.replaceAll("÷", "/");
+            userExp = userExp.replaceAll("X", "*");
+
+            Expression exp = new Expression(userExp);
+
+            String result = String.valueOf(exp.calculate());
+
+            //display.setSelection(result.length());
+            resultsTV.setText(result);
+        }
+    }
+
+    public void toDelete() {
         int cursorPos = display.getSelectionStart();
         int textlen = display.getText().length();
 
